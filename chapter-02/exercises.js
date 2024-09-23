@@ -54,7 +54,16 @@ on the number:
 */
 
 function fizzBuzz(start, end) {
-  
+  for (var i = start; i <= end; i++) {
+    if(i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzbuzz');
+    } else if (i % 3 === 0) {
+      console.log('fizz');
+    }else if (i % 5 === 0) {
+      console.log('buzz');
+    }else
+    console.log(i);
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -88,8 +97,18 @@ LOGS =>
 */
 
 function drawChessboard(x) {
-
-
+var chessboard = '';
+for (let i = 0; i < x; i++) {
+  for (let j = 0; j < x; j++) {
+if ((i + j) % 2 === 0) {
+  chessboard += ' ';
+}else {
+  chessboard += '#'; 
+}
+  }
+  chessboard += '\n';
+}
+console.log(chessboard)
 }
 
 ////////////////////////////////////////////////////////////////////////////////
