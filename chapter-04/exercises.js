@@ -2,12 +2,29 @@
 // range ///////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function range(start, end) {
-let result = [];
-for (let i = start; i = end; i++) {
-  result.push(i);
-}
-return result
+function range(start, end, step = 1) {
+  const result = [];
+
+  // Return an empty array if start and end are the same
+  if (start === end) {
+      return [];
+  }
+
+  // If step is negative, ensure start > end
+  if (step < 0 && start < end) {
+      return [];
+  }
+
+  // If step is positive, ensure start < end
+  if (step > 0 && start > end) {
+      return [];
+  }
+
+  for (let i = start; step > 0 ? i <= end : i >= end; i += step) {
+      result.push(i);
+  }
+  
+  return result;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
