@@ -14,8 +14,33 @@ if (a < b) {
 // isEven //////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function isEven() {
-
+function isEven(n) {
+  //   // Check for negative numbers
+  //   if (n < 0) {
+  //     return "Input must be a positive whole number.";
+  // }
+  // // Base cases
+  // if (n === 0) {
+  //     return true; // Zero is even
+  // }
+  // if (n === 1) {
+  //     return false; // One is odd
+  // }
+  // // Recursive case
+  // return isEven(n - 2);
+     // If n is negative, return false
+     if (n < 0) {
+      return false; 
+  }
+  // Base cases
+  if (n === 0) {
+      return true; // Zero is even
+  }
+  if (n === 1) {
+      return false; // One is odd
+  }
+  // Recursive case
+  return isEven(n - 2);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
